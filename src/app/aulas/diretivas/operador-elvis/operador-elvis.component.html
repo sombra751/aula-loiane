@@ -1,0 +1,5 @@
+<p>Tarefa: {{ tarefa.desc }}</p>
+<!-- <p>Responsavel:{{ tarefa.resp.nome }}</p> -->
+<p>Responsavel: {{ tarefa.resp != null ? tarefa.resp.nome : ''}}</p>
+<p>Responsavel: {{ tarefa.resp?.usuario}}</p>
+<!-- caso o objeto sejá null é uma boa opção para verificar mesmo sendo muito aninhado só adicionar o '?' e o '.'-->

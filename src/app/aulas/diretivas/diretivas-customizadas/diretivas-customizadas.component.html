@@ -1,0 +1,30 @@
+<p FundoAmarelo>diretivas customizadas<p>
+
+    <button class="btn" HighlightMouse>
+        botão com fundo amarelo
+    </button>
+
+<p HighlightMouse>texto HighlightMouse aqui</p>
+
+<p [Highlight]="'red'" [defaultColor]="'grey'">hello, how are you?</p>
+
+
+<h5>Diretivas ng-Else</h5>
+<div *ngIf="mostrarCursos" >
+    Lista de cursos aqui.
+  </div>
+
+  <div *ngElse="mostrarCursos">
+    Não existem cursos para serem listados.
+  </div>
+ <ng-template [ngElse]="mostrarCursos">
+  <div>
+    Não existem cursos para serem listados.
+  </div>
+</ng-template>
+  
+  <br>
+  <button (click)="onMostrarCursos()">
+    Mostrar ou esconder cursos
+  </button>
+  <br>

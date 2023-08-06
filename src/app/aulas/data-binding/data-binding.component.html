@@ -1,0 +1,113 @@
+<!--
+    Anotações:
+    ° {{}} é uma interpolação é mais utilizado para exibir valores no html
+    ° Usa colchetes [ ] para atribuir um valor de uma propriedade do componente a uma propriedade de um elemento do template.
+    ° Utiliza parênteses ( ) para ligar um evento do template a um método do componente.
+    ° o # é uma Variável de Referência do Template
+-->
+
+<section class="property-binding">
+    <!-- <article>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada como interpolação: {{ url }}</p>
+        <p>Resultado de 3 * 8 é: {{ 3*8 }}</p>
+        <p>Resultado de 3 * 8 é: {{ 3*8 + getValor() }}</p>
+        <p>Fiz o Curso de angular e gostei do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}" alt="">
+        <img [src]="urlImagem" alt="">
+        <img bind-src="urlImagem" alt="">
+    </article> -->
+
+    <!-- <article>
+        <h3>Class e Style Binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br>
+            <br>
+
+            <div class="alert {{ classe.value }}" role="alert" >
+                texto colorido conforme combo box
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-success]="classe.value == 'alert-success'">
+                A simple success
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-danger]="classe.value == 'alert-danger'">
+                A simple danger
+            </div>
+            <div class="alert" role="alert"
+                [class.alert-warning]="classe.value == 'alert-warning'">
+                A simple warning
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-info]="classe.value == 'alert-info'">
+                A simple info
+            </div>
+            <div class="alert alert-info" role="alert"
+            [style.display]="classe.value == 'alert-info'? 'block' : 'none'">
+               o texto aparece em caso de erro
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <h3>Event Binding</h3>
+        <div>
+            <button class="btn btn-primary" (click)="botaoClicado()">Clique-me</button>
+            <br><br>
+            <input type="text"
+                (keyup)="onKeyUp($event)"
+                (keyup.enter)="salvarValor(campoInput.value)"
+                #campoInput 
+                (blur)="salvarValor(campoInput.value)"> 
+
+            <p>valo atual:{{valorAtual}}</p>
+            <p>valo atual:{{valorSalvo}}<p>
+            
+            <br>
+            <span
+            (mouseover)="onmouseOverOut()"
+            (mouseout)="onmouseOverOut()"
+            [class.highlight]="isMouseOver">
+                passe o mouse sobre mim
+            </span>
+        </div>
+    </article> -->
+
+    <!-- <article>
+        <h3>two-way Binding</h3>
+        <div>
+            <input type="text"
+            [(ngModel)]="nome">
+            
+            <p>{{nome}}</p>
+        </div>
+
+        <div>
+            <input type="text" [(ngModel)]="pessoa.nome">
+            <input type="text" [(ngModel)]="pessoa.idade">
+
+            <p>meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos</p>
+            <p></p>
+        </div>
+    </article> -->
+
+    <article>
+        <h3>input/output</h3>
+        <div></div>
+        <app-input-property [nome]="nomeDoCurso"></app-input-property>
+        <app-output-property [valor]="valorInicial"
+        (mudouValor)="onMudouValor($event)"></app-output-property>
+    </article>
+</section>
