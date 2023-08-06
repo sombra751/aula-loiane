@@ -1,0 +1,19 @@
+<h2>property binding</h2>
+<h1>
+    <i class="fa"
+    [class.fa-heart]="!meuFavorito"
+    [class.fa-comment]="meuFavorito"
+    (click)="onClick()"
+    ></i>
+</h1>
+
+<h2>ngClass</h2>
+<h1>
+    <i class="fa"
+    [ngClass]="{' fa-twitter': !meuFavorito,
+    'fa-instagram': meuFavorito}"
+    (click)="onClick()"
+    ></i>
+</h1>
+
+<h1>oi</h1>

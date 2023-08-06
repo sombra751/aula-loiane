@@ -1,0 +1,27 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="nav navbar-nav">
+    <a class="nav-item nav-link" [class.active]="aba == 'home'" (click)="aba = 'home'">Home</a>
+    <a class="nav-item nav-link" [class.active]="aba == 'contato'" (click)="aba = 'contato'">Contato</a>
+    <a class="nav-item nav-link" [class.active]="aba == 'sobre'" (click)="aba = 'sobre'">Sobre</a>
+  </div>
+</nav>
+
+<div class="container" [ngSwitch]="aba">
+  <p *ngSwitchDefault>Modo home ativado</p>
+  <p *ngSwitchCase="'contato'">Modo contato ativado</p>
+  <p *ngSwitchCase="'sobre'">Modo sobre ativado</p>
+</div>
+
+<br>
+<h5>Removendo o * e usando template</h5>
+<div class="container" [ngSwitch]="aba">
+  <ng-template [ngSwitchCase]="'contato'">
+    <p>Modo contato ativado</p>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'sobre'" ngSwitchDefault>
+    <p>Modo sobre ativado</p>
+  </ng-template>
+  <ng-template [ngSwitchCase]="'home'" ngSwitchDefault>
+    <p>Modo home ativado</p>
+  </ng-template>
+</div>

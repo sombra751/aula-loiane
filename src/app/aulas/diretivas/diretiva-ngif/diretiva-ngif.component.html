@@ -1,0 +1,46 @@
+<!-- 
+    //ANOTAÇÕES\\
+    hidden: é para árvore de elementos pequenos 
+    ngIf:  é para árvore de elementos grandes
+-->
+
+<h5>Diretiva *ngIf</h5>
+
+<div *ngIf="cursos.length > 0">
+    Lista de csursos aqui.
+</div>
+<div *ngIf="cursos.length == 0">
+    não existem curso a serem listados.
+</div>
+<div *ngIf="mostraCursos">
+    Lista de cursos aqui.
+</div>
+<div *ngIf="!mostraCursos">
+    não existem curso a serem listados.
+</div>
+
+<br>
+<button (click)="onMostrarCursos()">Mostrar ou esconder cursos</button>
+<br><br>
+<h5>Hidden como alternativa</h5>
+
+<div [hidden]="mostraCursos">
+    Lista de cursos aqui. "hidden"
+</div>
+
+<div [hidden]="!mostraCursos">
+    não existem curso a serem listados. "hidden"
+</div>
+<br>
+<h5>Removendo o * e usando template</h5>
+<div *ngIf="mostraCursos">
+    Lista de cursos aqui.
+</div>
+
+<ng-template [ngIf]="mostraCursos">
+    <div>Lista de cursos aqui "template"</div>
+</ng-template>
+
+<div template="ngIf mostraCursos">
+OI
+</div>
