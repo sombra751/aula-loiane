@@ -1,0 +1,16 @@
+<h3>Detalhes do aluno</h3>
+
+
+<p>Id: {{ aluno.id }}</p>
+<p>Nome: {{ aluno.nome }}</p>
+<p>Email: {{ aluno.email }}</p>
+
+<a class="btn btn-primary" 
+    (click)="editarContato()">
+    <i class="bi bi-pencil-square"></i>
+</a>
+
+<a class="btn btn-danger" 
+    (click)="editarContato()">
+    <i class="bi bi-trash"></i>
+</a>

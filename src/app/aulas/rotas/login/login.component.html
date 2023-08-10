@@ -1,0 +1,21 @@
+<h5>Login</h5>
+
+<div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="usuario.nome" id="usuario" type="text" class="validate">
+          <label  for="usuario" class="active">Usuário</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="usuario.senha" id="senha" type="password" class="validate">
+          <label for="senha" class="active">Senha</label>
+        </div>
+      </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" (click)="fazerLogin()">Login
+    <i class="bi bi-patch-check"></i></button>
